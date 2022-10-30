@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+                <h1 style="font-family:'Times New Roman', Times, serif">Hospital Home</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                </ul>
+                <form class="d-flex" role="search">
+                    <a href="/hosp_register"> <button type="button" class="btn btn-outline-success mx-1"
+                            type="submit" data-bs-toggle="modal" data-bs-target="#SPModal">Signup</button></a>
+                    <button type="button" class="btn btn-outline-success mx-1" type="submit" data-bs-toggle="modal"
+                        data-bs-target="#loginModal">Login</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Login modal -->
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Enter your details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="/hospital_login" method="POST">
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input placeholder="abc@gmail.com" type="email" name="username" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input placeholder="Please enter your password" type="password" name="pass" class="form-control"
+                                id="exampleInputPassword1">
+                        </div>
+
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="container-fluid my-0 px-0">
+
+        <div class="image">
+            <img src="../static/images/hospital1.jpg" class="d-block w-100" alt="...">
+        </div>
+    </div>
+    <br>
+    <br>
+
+    <h1 class="text-center my-2">Don’t be <span style="color:red">“A negative”;</span> be <span style="color:green">“O
+            positive”</span></h1>
+    <div>
+        <h3 class="text-center" style="margin:70px">Hospitals play a vital role in the health care system. Hospitals are health care
+            institutions that have an organized medical and other qualified staff to deliver medical, nursing,
+            radiology, laboratory and related services every day and all the time.
+
+            Hospitals offer a variable range of acute, convalescent and terminal care using diagnostic, preventive and
+            curative services in response to acute and chronic conditions arising from diseases as well as injuries and
+            genetic abnormalities. With all these various services, hospitals have been able to generate essential
+            information for research, expertise, education and management.</h3>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

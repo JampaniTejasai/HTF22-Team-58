@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../static/css/registration.css">
+    <script>
+        function printError(elemId, hintMsg) {
+            document.getElementById(elemId).innerHTML = hintMsg;
+        }
+        function validate() {
+            var mail = document.getElementById("text1").value;
+            if (mail == "") {
+                printError("emailErr", "Please enter your email address");
+            } else {
+                // Regular expression for basic email validation
+                var regex = /^\S+@\S+\.\S+$/;
+                if (regex.test(mail) === false) {
+                    printError("emailErr", "Please enter a valid email address");
+                } else {
+                    printError("emailErr", "");
+                }
+            }
+        };
+    </script>
+</head>
+
+<body class="IndexBody">
+    <div class="LoginAndRegisterContainer">
+        <div class="LoginContainer">
+            <div class="LoginBody">
+                <div class="LoginBodyLeft">
+                    <h1 class="LoginBodyLefth2"> </h1>
+                    <div class="LoginBodyLeftBottom">
+                    
+                        <h2 class="LoginBodyLeftBottomText">
+                        </h2>
+                        <img src="https://www.gte-media.com/wp-content/uploads/2020/10/4123123.png" alt="">
+                    </div>
+                </div>
+                <div class="LoginBodyRight">
+                    <h2 class="LoginBodyRighth1">Welcome To panacea.ai</h2>
+                   
+                    <form method=POST action="{{ url_for('register') }}">
+                    <div class="EmailContainer">
+                        <div class="firstname" > First name</div>
+                       
+                        <div class="InputTextBox"> <input type="text" size="40px" id="text1" /></div>
+                        <div class="last name">  Last name</div>
+                       
+                        <div class="InputTextBox"> <input type="text" size="40px" id="text1" /></div>
+                        
+                        <div class="phoneno"> Mobile</div>
+                       
+                        <div class="InputTextBox"> <input type="text" size="40px" id="text1" /></div>
+
+                        <div class="EmailText"> Email </div>
+                       
+                        <div class="InputTextBox"> <input type="text" name="username" size="40px" id="text1" /></div>
+                        <p class="ErrorTextBox" id="emailErr"></p>
+                        <div class="password">Password </div>
+                        
+                        <div class="InputTextBox"> <input type="password" name="pass" size="40px" id="text1" /></div>
+                        
+                        <div class="confirmpasword"> Confirm password</div>
+                       
+                        <div class="InputTextBox"> <input type="password" size="40px" id="text1" /></div>
+                    </div>
+                    <br>
+                    <div class="registration"> <button type="submit">Register</button></div>
+                    
+                </form>
+                    <br>
+                    <div class="MainLinesection">
+                        <div class="HorizonalLIne">
+                        </div>
+                        <div class="ORtext"> already a member </div>
+                        <div class="HorizonalLIne"></div>
+                        
+                    </div>
+                    <br>
+                    <div class="registration">
+                        <a href="{{url_for('index')}}"><button> Sign in</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

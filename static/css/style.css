@@ -1,0 +1,52 @@
+.my_button{
+    width:250px;
+    height:70px;
+    font-size:30px;
+    font-family: lato;
+    background-color: #b22222;
+    border:1px solid goldenrod;
+    margin-top: 100px;
+}
+.center{
+    text-align: center;
+}
+.my_pdf{
+    margin-bottom: 150px;
+
+    font-family: lato;
+} 
+/* .choosefile{
+    width: 100px;
+    height: 40px;
+    background-color:#b22222;
+} */
+
+.upload-btn-wrapper {
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+  }
+  
+  .btn-upload {
+    border: 2px solid gray;
+    color: gray;
+    background-color: white;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .upload-btn-wrapper input[type=file] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+  }
+
+  #draw-line {
+    display: block;
+    border-top: 4px solid #000;
+  }

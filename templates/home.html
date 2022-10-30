@@ -1,0 +1,197 @@
+
+<DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+                <h1>Blood Bank</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                </ul>
+                <form class="d-flex" role="search">
+                    <button type="button" class="btn btn-outline-success mx-1" type="submit" data-bs-toggle="modal"
+                        data-bs-target="#loginModal">Login</button>
+                        <button type="button" class="btn btn-outline-success mx-1" type="submit" data-bs-toggle="modal"
+                        data-bs-target="#SPModal">Signup</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Login modal -->
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Enter your details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form method='POST' action='/login'>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input placeholder="abc@gmail.com" type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input placeholder="Please enter your password" type="password" class="form-control"
+                                id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="SPModal" tabindex="-1" aria-labelledby="SPModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="SPModalLabel">Enter your details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Username</label>
+                            <input placeholder="Enter a username" type="text" class="form-control" id="exampleInputusername"
+                                aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input placeholder="abc@gmail.com" type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input placeholder="Please enter your password" type="password" class="form-control"
+                                id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid my-0 px-0">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../static/images/blood-donation-1.png" class="d-block w-60" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="../static/images/blood2.jpg" class="d-block w-70" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="../static/images/blood2.png" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <br>
+    <br>
+
+    <h1 class="text-center my-2">Don’t be <span style="color:red">“A negative”;</span> be <span style="color:green">“O
+            positive”</span></h1>
+    <div>
+        <h3 class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, repellat itaque optio
+            molestiae modi, inventore qui expedita consequuntur atque sit blanditiis sequi non, quae delectus
+            praesentium iusto incidunt debitis quidem dolorem veniam laudantium neque? Quasi deleniti expedita beatae
+            ipsa, odio, ab eos nesciunt modi consequatur laborum non praesentium. Vitae, eaque?</h3>
+    </div>
+    <div>
+        <h3 class="text-center my-3">The current date and time is:{{date}}</h3>
+    </div>
+    <div class="row mx-5 my-5 px-5">
+        <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+                <img src="blood2.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title"><h2 style="font-style:italic;color:darkblue">Donor</h2></h5>
+                    <p class="card-text"><h3>"Once a blood donor is always a lifesaver"</h3></p>
+                    <a href="#" class="btn btn-primary">Register</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+                <img src="blood5.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title"><h2 style="font-style:italic;color:darkblue">Blood Bank</h2></h5>
+                    <p class="card-text"><h5>Donate blood,Not on roads but in blood donation camps.</h5></p>
+                    <a href="#" class="btn btn-primary">Register</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+                <img src="blood-donation-1.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title"><h2 style="font-style:italic;color:darkblue">Hospital</h2></h5>
+                    <p class="card-text"><h4>One bag of blood can bring back one from the dead.</h4></p>
+                    <a href="#" class="btn btn-primary">Register</a>
+                </div>
+            </div>
+        </div>
+
+    </div> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
+
+</html> 
